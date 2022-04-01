@@ -1,0 +1,7 @@
+# Directories
+/.git/
+
+# Files
+.gitignore
+build_push.cmd
+Dockerfile
