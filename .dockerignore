@@ -1,7 +1,7 @@
 # Directories
 /.git/
+/.github/
 
 # Files
 .gitignore
-build_push.cmd
 Dockerfile
