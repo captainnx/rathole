@@ -17,8 +17,6 @@ RUN case "$TARGETPLATFORM" in \
 
 FROM alpine:3.12.0
 WORKDIR /app
-COPY start.sh .
 COPY --from=temp /tmp/rathole .
-RUN  chmod +x /app/start.sh && chown -R 1000:1000 .
 USER 1000:1000
-ENTRYPOINT ["/app/start.sh", "./config.toml"]
+ENTRYPOINT ["./rathole"]
