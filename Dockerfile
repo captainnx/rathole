@@ -6,6 +6,7 @@ WORKDIR /tmp
 RUN apk --no-cache add curl unzip
 RUN echo $TARGETPLATFORM
 RUN case "$TARGETPLATFORM" in \
+  "windows/arm64") ARCH=x86_64-pc-windows-msvc ;; \
   "linux/arm64") ARCH=aarch64-unknown-linux-musl ;; \
   "linux/amd64") ARCH=x86_64-unknown-linux-musl ;; \
   *) exit 1 ;; \
